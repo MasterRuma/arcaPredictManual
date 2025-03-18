@@ -1,0 +1,220 @@
+/* 기본 스타일 설정 */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.8;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 20px;
+  max-width: 1000px; /* 양옆 여백을 확보 */
+}
+
+/* 차례(목차) 스타일 */
+#ul {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  max-width: 300px;
+  margin: 20px 0;
+  clear: both;
+}
+
+/* 리스트 스타일 */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* 1단계 리스트 */
+#ul > li {
+  list-style-type: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+#ul > li::before {
+  content: "▶";
+  color: #007bff;
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+}
+
+/* 2단계 리스트 */
+#ul ul {
+  padding-left: 25px;
+}
+
+#ul ul > li {
+  list-style-type: none;
+  font-size: 1rem;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  position: relative;
+  color: #0056b3;
+}
+
+#ul ul > li::before {
+  content: "○";
+  color: #0056b3;
+  font-size: 0.9rem;
+  position: absolute;
+  left: 0;
+}
+
+/* 제목 스타일 */
+h1,
+h2,
+h3 {
+  color: #222;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  padding-left: 10px;
+  border-left: 5px solid #007bff;
+}
+
+/* 링크 스타일 */
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* 표 스타일 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: left;
+}
+
+th {
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+/* 이미지 스타일 */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 코드 블록 스타일 */
+code {
+  background: #f4f4f4;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  display: inline-block;
+}
+
+/* 강조 스타일 */
+strong {
+  color: #000;
+  font-weight: bold;
+}
+
+/* FAQ 스타일 */
+.faq {
+  background: #f8f9fa;
+  padding: 20px;
+  border-left: 5px solid #007bff;
+  margin: 15px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+}
+
+.faq:hover {
+  background: #eef2ff;
+}
+
+/* 버튼 스타일 */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
